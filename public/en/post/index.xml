@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Test Web Page</title>
+    <link>/en/post/</link>
+    <description>Recent content in Posts on Test Web Page</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 2</title>
+      <link>/en/post/post-2/</link>
+      <pubDate>Fri, 14 Apr 2017 11:25:05 -0400</pubDate>
+      
+      <guid>/en/post/post-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed mi in quam iaculis placerat eget eget augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec euismod nibh ut sem commodo, vitae porta magna bibendum. Fusce dictum quam ut suscipit pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Phasellus eu porta ipsum. Cras vulputate metus lacus, nec volutpat justo lacinia non.</description>
+    </item>
+    
+    <item>
+      <title>Post 1</title>
+      <link>/en/post/post-1/</link>
+      <pubDate>Thu, 13 Apr 2017 11:15:58 -0400</pubDate>
+      
+      <guid>/en/post/post-1/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed mi in quam iaculis placerat eget eget augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec euismod nibh ut sem commodo, vitae porta magna bibendum. Fusce dictum quam ut suscipit pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Phasellus eu porta ipsum. Cras vulputate metus lacus, nec volutpat justo lacinia non.</description>
+    </item>
+    
+  </channel>
+</rss>
