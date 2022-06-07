@@ -31,6 +31,9 @@ jobs:
           # The directory to scan
           arguments: --allow-missing-href --disable-external --empty-alt-ignore 
 
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
       - uses: repo-sync/pull-request@v2
         name: pull-request
         with:
