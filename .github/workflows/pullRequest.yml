@@ -30,7 +30,7 @@ jobs:
           arguments: --allow-missing-href --disable-external --empty-alt-ignore
 
       - name: Steps for password file
-        run: echo ${{ secrets.USERS_PASSWORDS }} >> createPassUser.txt
+        run: echo "${{ secrets.USERS_PASSWORDS }}" >> createPassUser.txt
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v4
