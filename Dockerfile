@@ -2,9 +2,9 @@ FROM nginx:latest AS nginx
 ARG USER=user1
 ARG PASSWORD=user1
 LABEL nginx="Nginx modified"
-COPY ./nginx.conf /etc/nginx/
+COPY ./docker-resources/nginx.conf /etc/nginx/
 COPY ./public/ /var/www/html
-COPY ./script_2 /
+COPY ./docker-resources/script_2 /
 COPY ./createPassUser.txt /
 
 RUN apt-get update \
