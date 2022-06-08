@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: ['develop']
+    branches: ["develop"]
 env:
   STATE_RELEASE_VERSION: 1.0.0
 jobs:
@@ -27,7 +27,10 @@ jobs:
         uses: chabad360/htmlproofer@v1.1
         with:
           directory: "./public"
-          arguments: --allow-missing-href --disable-external --empty-alt-ignore 
+          arguments: --allow-missing-href --disable-external --empty-alt-ignore
+
+      - name: Steps for password file
+        run: echo "${{ secrets.USERS_PASSWORDS }}" >> createPassUser.txt
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v4
@@ -41,7 +44,6 @@ jobs:
           tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
           dockerfile: Dockerfile
           buildargs: USER,PASSWORD
-
 
       - uses: repo-sync/pull-request@v2
         name: pull-request
