@@ -36,7 +36,6 @@ jobs:
         run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
       - name: Publish to Registry
-        pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
         uses: elgohr/Publish-Docker-Github-Action@v4
         env:
           USER: ${{ secrets.HTPASSWD_USER }}
