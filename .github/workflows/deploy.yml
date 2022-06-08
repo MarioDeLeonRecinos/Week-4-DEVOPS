@@ -16,7 +16,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
             docker pull mleon96/week-4
             docker container stop docker-deploy
             docker container rm docker-deploy
             docker run --name docker-deploy -d -p 80:80 mleon96/week-4
+            docker logout
