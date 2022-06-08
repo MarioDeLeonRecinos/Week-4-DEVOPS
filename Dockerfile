@@ -8,8 +8,8 @@
 #ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 FROM nginx:latest AS nginx
-ENV USER=user1
-ENV PASSWORD=user1
+ARG USER=user1
+ARG PASSWORD=user1
 LABEL nginx="Nginx modified"
 COPY ./nginx.conf /etc/nginx/
 COPY ./public/ /var/www/html
