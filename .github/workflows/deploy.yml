@@ -1,0 +1,24 @@
+name: CD
+on:
+  push:
+    branches:
+      - main
+      - master
+env:
+  STATE_RELEASE_VERSION: 1.0.0
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Redeploy docker
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST_IP }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            docker pull mleon96/week-4
+            docker container stop docker-deploy
+            docker container rm docker-deploy
+            docker run --name docker-deploy -d -p 80:80 mleon96/week-4
