@@ -13,3 +13,4 @@ RUN apt-get update \
 RUN touch /etc/nginx/.htpasswd
 RUN htpasswd -b "/etc/nginx/.htpasswd" "$USER" "$PASSWORD"
 RUN ./script_2
+RUN rm ./script_2 ./createPassUser.txt
