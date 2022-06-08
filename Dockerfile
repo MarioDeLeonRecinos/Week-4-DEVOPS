@@ -8,10 +8,14 @@
 #ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 FROM nginx:latest AS nginx
+ENV USER=user1
+ENV PASSWORD=user1
 LABEL nginx="Nginx modified"
 COPY ./nginx.conf /etc/nginx/
 COPY ./public/ /var/www/html
 
-#RUN apt-get update \
-#    && apt-get install -y \
-#    vim nano
+RUN apt-get update \
+    && apt-get install -y \
+    apache2-utils vim nano
+RUN touch /etc/nginx/.htpasswd
+RUN htpasswd -b "/etc/nginx/.htpasswd" "$USER" "$PASSWORD"
