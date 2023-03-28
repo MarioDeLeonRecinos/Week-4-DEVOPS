@@ -33,7 +33,7 @@ jobs:
         run: echo "${{ secrets.USERS_PASSWORDS }}" >> createPassUser.txt
 
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@v4
+        uses: elgohr/Publish-Docker-Github-Action@v5
         env:
           USER: ${{ secrets.HTPASSWD_USER }}
           PASSWORD: ${{ secrets.HTPASSWD_PASSWORD }}
