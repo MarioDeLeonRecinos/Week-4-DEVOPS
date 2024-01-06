@@ -44,6 +44,6 @@ jobs:
           destination_branch: "webpage-master"
           pr_title: "Pulling ${{ github.ref }} into webpage-master"
           pr_body: "👑 *An automated PR*"
-          pr_reviewer: "mdeleon"
+          pr_reviewer: "MarioDeLeonRecinos"
           pr_draft: true
           github_token: ${{ secrets.TOKEN_REPOSITORY }}
