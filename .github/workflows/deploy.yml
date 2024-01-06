@@ -2,8 +2,7 @@ name: CD
 on:
   push:
     branches:
-      - main
-      - master
+      - webpage-master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
